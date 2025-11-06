@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d0c11c7a2c46b4c8fe4c5240681921, type: 3}
+  m_Name: New Fast Noise
+  m_EditorClassIdentifier: 
+  _maxSteps: 1
+  _waterHeigth: -0.15
+  _sandHeigth: 0.15
+  _grassHeigth: 0.76
+  _rockHeigth: 1
+  _frequency: 0.018
+  _amplitude: 1.341
+  _fractalType: 1
+  _lacunarity: 1.69
+  _persistance: 0.344
