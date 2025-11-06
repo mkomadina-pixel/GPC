@@ -1,6 +1,7 @@
 # GPC
 
-Here you will find the basics to learn procedural content genration(Generation procedural de contenu in french)
+Here you will find the basics to learn procedural content genration (Generation Procedural de Contenu in french), whit 4 algorthims. 
+
 
 ##1 Simple room placement
 
