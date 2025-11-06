@@ -1,16 +1,19 @@
 # GPC
 
-Here you will find the basics to learn procedural content genration (Generation Procedural de Contenu in french), whit 4 algorthims. 
+Here you will find the basics to learn procedural content generation (Generation Procédurale de Contenu in French), with 4 algorithms. 
 
-## titles
-- [1. Simple room placement](#1. Simple room placement)
+## Table of Contents
+- [1. Simple Room Placement](#1-simple-room-placement)
+- [2. Binary Space Partition (BSP)](#2-binary-space-partition-bsp)
+- [3. Cellular Automata](#3-cellular-automata)
+- [4. Fast Noise Lite](#4-fast-noise-lite)
+
 ---
-## 1. Simple room placement
+
+## 1. Simple Room Placement
 
 ## 2. Binary Space Partition (BSP)
 
 ## 3. Cellular Automata
 
 ## 4. Fast Noise Lite
-
-
