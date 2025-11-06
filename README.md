@@ -1,6 +1,9 @@
-<h1># GPC</h1>
+# GPC
 
-<h2>1 Simple room placement</h2>
-<h2>2 BSP</h2>
-<h2>3 Cellular Automata</h2>
-<h2>4 Fast Noise Lite</h2>
+Here you will find the basics to learn procedural content genration(Generation procedural de contenu in french)
+
+##1 Simple room placement
+##2 Binary Space Partition (BSP)
+##3 Cellular Automata
+##4 Fast Noise Lite
+
