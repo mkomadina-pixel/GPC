@@ -48,8 +48,10 @@ This algorithm is about generate a field and try to "brute force" the placement 
 
 ## 2. Binary Space Partition (BSP)
 The BSP is a binary tree logic, we create a ground and then recursivly it create nods and the leaf are our room. this method is more effective tha the simple room placement and it let us connect the room smarted.
- private void DrawRooms(BSPNod room)
- {
+
+
+private void DrawRooms(BSPNod room)
+{
      if (room._child1 != null)
      {
          DrawRooms(room._child1);
