@@ -14,7 +14,7 @@ In this project we will use differents tools
 ### ProceduralGridGenerator
 This algo will create a grid in fonction of a generation algorithm
 ### Grid 
-It contais diferents cells which have diferents prefabs to build a map
+It contais diferents cells which have diferents prefabs to build a map. This cells are gameObjects
 ### Random service
 Random service is a tool for generate a random number whit a seed. We want the "Chaos" to be repeat, to test.
 ## 1. Simple Room Placement
