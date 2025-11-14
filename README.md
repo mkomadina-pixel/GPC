@@ -18,8 +18,7 @@ It contais diferents cells which have diferents prefabs to build a map
 ### Random service
 Random service is a tool for generate a random number whit a seed. We want the "Chaos" to be repeat, to test.
 ## 1. Simple Room Placement
-This algorithm is about generate a field and try to "brute force" the placement of rooms. We try to place a room, if we cant we try again in a random new localitation. Program stop when we place the number of room we want or a certain number of attemps.
-            
+This algorithm generates a field and tries to “brute-force” the placement of rooms. It attempts to place a room; if it cannot, it tries again in a random location. The program stops when the desired number of rooms is placed or a maximum number of attempts is reached.          
             for (int i = 0; i < _maxSteps && i < _maxRooms; i++)
             {
                 // Check for cancellation
@@ -47,8 +46,7 @@ This algorithm is about generate a field and try to "brute force" the placement 
             }
 
 ## 2. Binary Space Partition (BSP)
-The BSP is a binary tree logic, we create a ground and then recursivly it create nods and the leaf are our room. this method is more effective tha the simple room placement and it let us connect the room smarted.
-
+BSP is a binary tree logic. We create a ground, then recursively divide it into nodes. The leaves are our rooms. This method is more efficient than simple room placement and allows us to connect rooms more intelligently.
 
             private void DrawRooms(BSPNod room)
             {
@@ -109,11 +107,17 @@ The BSP is a binary tree logic, we create a ground and then recursivly it create
                  }
              }
 ## 3. Cellular Automata
-Here its gonna generate a white noise, whit a density of our choise. Then it will parcours the grid from the bottom left and check each cell neigboors, if a cell have 4 grounds as neirboors it will become a ground else water.
-It dont check the outer borders
+This algorithm generates white noise with a chosen density. It then goes through the grid from bottom-left and checks each cell’s neighbors. If a cell has 4 ground neighbors, it becomes ground; otherwise, it becomes water. The outer borders are not checked.
 
 ![ezgif-294f4588009f6539](https://github.com/user-attachments/assets/7c2eecb7-813e-4ffc-a358-59e09af0b43e)
 
 
 ## 4. Fast Noise Lite
+This algorithm generates noise as a grid of floats in the range (-1, 1). The values represent height. Heights are gradual: a cell with height -1 cannot have a neighbor with height 1. My contribution was adding an interpretation of the heights (e.g., below 0 is water, above 0.5 is mountain). This algorithm can use different types of noise, and the goal is to tweak parameters to get the desired result.
 
+<img width="453" height="606" alt="Capture d&#39;écran 2025-11-14 144558" src="https://github.com/user-attachments/assets/ed454437-b0eb-4165-9ad9-17a8aef47736" />
+
+
+## Credits
+I want to thank RUTKOWSKI Yona for the lessons and the code of the tools used in this project.
+Thanks also to FastNoise: https://github.com/Auburn/FastNoiseLite
