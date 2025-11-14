@@ -109,5 +109,11 @@ The BSP is a binary tree logic, we create a ground and then recursivly it create
                  }
              }
 ## 3. Cellular Automata
+Here its gonna generate a white noise, whit a density of our choise. Then it will parcours the grid from the bottom left and check each cell neigboors, if a cell have 4 grounds as neirboors it will become a ground else water.
+It dont check the outer borders
+
+![ezgif-294f4588009f6539](https://github.com/user-attachments/assets/7c2eecb7-813e-4ffc-a358-59e09af0b43e)
+
 
 ## 4. Fast Noise Lite
+
