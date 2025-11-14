@@ -9,9 +9,16 @@ Here you will find the basics to learn procedural content generation (Generation
 - [4. Fast Noise Lite](#4-fast-noise-lite)
 
 ---
-
+## Tools
+In this project we will use differents tools 
+### ProceduralGridGenerator
+This algo will create a grid in fonction of a generation algorithm
+### Grid 
+It contais diferents cells which have diferents prefabs to build a map
+### Random service
+Random service is a tool for generate a random number whit a seed. We want the "Chaos" to be repeat, to test.
 ## 1. Simple Room Placement
-This algorithm is about generate a field and the ntry to "brute force" the placement of rooms. We try to place a room, if we cant we try again in a random new localitation. Program stop when we place the number of room we want or a certain number of attemps.
+This algorithm is about generate a field and try to "brute force" the placement of rooms. We try to place a room, if we cant we try again in a random new localitation. Program stop when we place the number of room we want or a certain number of attemps.
             
             for (int i = 0; i < _maxSteps && i < _maxRooms; i++)
             {
