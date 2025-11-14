@@ -47,7 +47,65 @@ This algorithm is about generate a field and try to "brute force" the placement 
             }
 
 ## 2. Binary Space Partition (BSP)
+The BSP is a binary tree logic, we create a ground and then recursivly it create nods and the leaf are our room. this method is more effective tha the simple room placement and it let us connect the room smarted.
+ private void DrawRooms(BSPNod room)
+ {
+     if (room._child1 != null)
+     {
+         DrawRooms(room._child1);
+         DrawRooms(room._child2);
+     }
+     else
+     {
+         PlaceRoom(room._bounds);
+     }
+ }
 
+ private void PlaceRoom(RectInt room)
+ {
+     for (int x = room.xMin; x < room.xMax; x++)
+     {
+         for (int y = room.yMin; y < room.yMax; y++)
+         {
+             if (!Grid.TryGetCellByCoordinates(x, y, out Cell cell))
+                 continue;
+             AddTileToCell(cell, ROOM_TILE_NAME, true);
+
+         }
+     }
+
+ }
+
+ private void ConectSisters(BSPNod room)
+ {
+     if (room._child1 != null)
+     {
+         ConectSisters(room._child1);
+         ConectSisters(room._child2);
+
+         Vector2Int c1 = room._child1._bounds.GetCenter();
+         Vector2Int c2 = room._child2._bounds.GetCenter();
+
+         int fixedY = c1.y;
+         for (int x = Mathf.Min(c1.x, c2.x); x <= Mathf.Max(c1.x, c2.x); x++)
+         {
+             if (!Grid.TryGetCellByCoordinates(x, fixedY, out Cell cell))
+                 continue;
+             if (cell.GridObject.Template.Name == "Grass")
+                 AddTileToCell(cell, CORRIDOR_TILE_NAME, true);
+         }
+
+         // Couloir vertical
+         int fixedX = c2.x;
+         for (int y = Mathf.Min(c1.y, c2.y); y <= Mathf.Max(c1.y, c2.y); y++)
+         {
+             if (!Grid.TryGetCellByCoordinates(fixedX, y, out Cell cell))
+                 continue;
+             if (cell.GridObject.Template.Name == "Grass")
+                 AddTileToCell(cell, CORRIDOR_TILE_NAME, true);
+         }
+     }
+ }
 ## 3. Cellular Automata
 
 ## 4. Fast Noise Lite
